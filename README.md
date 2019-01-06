@@ -14,12 +14,32 @@ historical_transactions.csv - up to 3 months' worth of historical transactions f
 merchants.csv - additional information about all merchants / merchant_ids in the dataset.
 new_merchant_transactions.csv - two months' worth of data for each card_id containing ALL purchases that card_id made at merchant_ids that were not visited in the historical data.
 
+
 ### feature engineering --- data mining
 Data type: Datetime, Id, Categorical/Ordinal, Numeric
 Prepocess: standard scaled
 Decision tree based Prepocessing: GBDT(XGBoost), Random Forest, AdaBoosting
 Libraries: XGBoost, lightGBM, scikit-learn
 
+########################################################################
+### exploratory data analysis
+- visualizations: leaks
+
++ train: 
+- Violineplots: Violin plots are similar to box plots, except that they also show the probability density of the data at different values 
+- target
+- feature engineering
+
++ new_merchant_transactions
 
 
 
+########################################################################
+pro,con analysis
+feasible 
+
+########################################################################
+2019.01.12
+correlation analysis: purchase_amount, authorized_flag
+need to more analyze: categories
+outlier analysis: numerical_1
