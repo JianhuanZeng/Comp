@@ -21,7 +21,7 @@ Prepocess: standard scaled
 Decision tree based Prepocessing: GBDT(XGBoost), Random Forest, AdaBoosting
 Libraries: XGBoost, lightGBM, scikit-learn
 
-########################################################################
+
 # EDA: exploratory data analysis
 visualizations: leaks
 
@@ -29,10 +29,7 @@ visualizations: leaks
   - Violineplots: Violin plots are similar to box plots, except that they also show the probability density of the data at different values <br/>
   - target<br/>
   - feature engineering<br/>
-
 + new_merchant_transactions
-
-
 
 ########################################################################
 pro,con analysis<br/>
@@ -43,6 +40,7 @@ correlation analysis: purchase_amount, authorized_flag<br/>
 need to more analyze: categories<br/>
 outlier analysis: numerical_1<br/>
 ########################################################################
+
 # Base Model 1:<br/>
 + EDA <br/>
   - df['elapsed_time']
@@ -52,4 +50,16 @@ outlier analysis: numerical_1<br/>
 using historical_transactions, new_merchant_transactions<br/>
   - pd.get_dummies(historical_transactions, columns=['category_2', 'category_3'])
   - reduce_mem_usage
-  - authorized_transactions
+  - authorized_flag: authorized_transactions, historical_transactions -= authorized_transactions, auth_mean
+  - purchase_month: aggregate_transactions
+  - purchase_amount: 
+  - ###################
+  - history.groupby(['card_id']).agg(agg_func)
+  - (history.groupby('card_id').size().reset_index(name='transactions_count'))
+  - history.groupby(['card_id', 'month_lag']), groupby('card_id').agg(['mean', 'std'])
+  - ###################
+  - train merge history, authorized, new, final_group, auth_mean
+  - divide features into Categorical and Numeric
+  
++ lightGBM  
++ LightGBM-1 with Repeated kfold approach
