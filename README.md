@@ -39,6 +39,7 @@ feasible <br/>
 correlation analysis: purchase_amount, authorized_flag<br/>
 need to more analyze: categories<br/>
 outlier analysis: numerical_1<br/>
+https://arxiv.org/pdf/1606.07792.pdf<br/>
 ########################################################################
 
 # Base Model 1:<br/>
@@ -63,3 +64,6 @@ using historical_transactions, new_merchant_transactions<br/>
   
 + lightGBM  
 + LightGBM-1 with Repeated kfold approach
+
+########################################################################
+
